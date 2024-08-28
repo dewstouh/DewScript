@@ -23,7 +23,7 @@ AIFl5 = 31621 + 69 -- apartment instant finish local 3
 Acv0 = false
 AG = 4543384 + 1
 
---
+-- test
 is_player_male = (ENTITY.GET_ENTITY_MODEL(PLAYER.PLAYER_PED_ID()) == joaat("mp_m_freemode_01"))
 
 function run_script(name) -- start script thread

@@ -551,11 +551,8 @@ Level:add_imgui(function()
         ImGui.SeparatorText("Car Meet Reputation Level")
 
         if ImGui.Button("Car Meet LVL 1000") then
-            for i = 262145 + 30958, 262145 + 30987 do
-                globals.set_float(i, 100000)
-            end
+            stats.set_int(MPX() .. "CAR_CLUB_REP", 997430)
             gui.show_success("Succesfully unlocked car meet lvl 1000!", "re-enter the meet to apply!")
-
         end
 
         ImGui.Separator()

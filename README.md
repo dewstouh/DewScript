@@ -4,7 +4,7 @@
 
 ### Money
 - ✅ **36 Million LOOP / 30 MINUTES**
-- ✅ **Create MODDED 15 MILLLION APARTMENT HEISTS**
+- ✅ **Create MODDED 15 MILLION APARTMENT HEISTS**
 
 ### Character Upgrades
 - ✅ **Max STATS**
@@ -23,5 +23,11 @@
 - ✅ **Unlock all VEHICLE MODIFICATIONS**
 - ✅ **Unlock all ACHIEVEMENTS**
 - ✅ **Unlock LEVEL 1000 on Los Santos Car Meet**
+- ✅ **Unlock Car Meet Prize Ride**
 
-*And more coming soon!*
+
+### 🔨 Coming Soon...
+- 🔲 Casino Rigging
+- 🔲 Player Money Drops
+- 🔲 Vehicle Settings *(RGB Headlights, Police Headlights...)*
+*And more!*

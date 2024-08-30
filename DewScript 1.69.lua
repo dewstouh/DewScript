@@ -10,6 +10,11 @@ require('includes.dewscript.utils.samurais_utils')
 CURRENT_BUILD = Game.GetBuildNumber()
 CURRENT_VERSION = Game.GetOnlineVersion()
 
+if not NETWORK.NETWORK_IS_SESSION_ACTIVE() then
+    gui.show_error("DewScript " .. TARGET_VERSION, " This script only works in the Online Mode!")
+end
+
+
 local DewMenu = gui.add_tab("DewScript " .. TARGET_VERSION)
 
 gui.show_success("DewScript " .. TARGET_VERSION, " has successfully loaded!")
@@ -76,7 +81,6 @@ updateStats()
 
 
 Skills:add_imgui(function()
-    if NETWORK.NETWORK_IS_SESSION_ACTIVE() then
         local fastRunStatus = stats.get_int(MPX() .. "CHAR_ABILITY_1_UNLCK")
         local statusText = (fastRunStatus == -1 and "On") or (fastRunStatus == 0 and "Off") or "unknown"
 
@@ -158,11 +162,6 @@ Skills:add_imgui(function()
 
             gui.show_success("Applied custom skills!", "Success!")
         end
-
-    else
-        ImGui.Text("This feature is only available in Online")
-    end
-
 end)
 
 -- character stats

@@ -474,8 +474,11 @@ level = stats.get_int(MPX() .. "CHAR_RANK_FM")
 crewLevel = {}
 
 for i = 0, 4 do
-    table.insert(crewLevel, findIndex(stats.get_int("MPPLY_CREW_LOCAL_XP_" .. i), rp))
+    local cwRP = stats.get_int("MPPLY_CREW_LOCAL_XP_" .. i)
+    local cwLevel = findClosestNumberIndex(rp, cwRP)
+    table.insert(crewLevel, cwLevel)
 end
+
 
 local Level = Self:add_tab("Level Menu")
 Level:add_imgui(function()
@@ -516,7 +519,7 @@ Level:add_imgui(function()
     if ImGui.BeginTabItem("Crew Level") then
         for i, value in pairs(crewLevel) do
             ImGui.SeparatorText("Crew " .. i)
-            ImGui.BulletText("Crew " .. i .. " Level: " .. findIndex(stats.get_int("MPPLY_CREW_LOCAL_XP_" .. i - 1), rp))
+            ImGui.BulletText("Crew " .. i .. " Level: " .. findClosestNumberIndex(rp, stats.get_int("MPPLY_CREW_LOCAL_XP_" .. i - 1)))
             crewLevel[i], _ = ImGui.InputInt("##CrewLevel" .. i, crewLevel[i], 0, 8000)
             ImGui.SameLine()
             if ImGui.Button("+##CrewLevel" .. i) then

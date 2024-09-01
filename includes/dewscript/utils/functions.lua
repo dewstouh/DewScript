@@ -88,3 +88,19 @@ function trigger_transaction(hash, amount)
     globals.set_int(4537311, 2)
 end
 
+function findClosestNumberIndex(table, value)
+    local indiceMasCercano = nil
+    local menorDiferencia = math.huge
+
+    for i, numero in ipairs(table) do
+        local diferencia = math.abs(numero - value)
+
+        -- Si la diferencia actual es menor que la menor diferencia registrada
+        if diferencia < menorDiferencia then
+            menorDiferencia = diferencia
+            indiceMasCercano = i
+        end
+    end
+
+    return indiceMasCercano
+end

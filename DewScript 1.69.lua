@@ -3831,7 +3831,6 @@ DewMoneyLoops:add_imgui(function()
     blockTransactionErrors, _ = ImGui.Checkbox("Block Transaction Errors", blockTransactionErrors, true)
     helpmarker(false, "Avoid all the Transaction Error Screens to keep the gameplay smooth.")
     if blockTransactionErrors then
-        gui.show_message("Blocking transaction errors")
         globals.set_int(4537456, 0)
         globals.set_int(4537457, 0)
         globals.set_int(4537458, 0)
